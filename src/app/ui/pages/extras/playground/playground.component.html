@@ -1,0 +1,17 @@
+<section class="flex flex-col p-4">
+	<h3 class="text-primary-2">checkbox</h3>
+	<div class="flex">
+		<cl-checkbox [formControl]="controlCheckbox" label="Seleccino" />
+	</div>
+
+	{{ controlCheckbox.getRawValue() }}
+</section>
+<section class="flex flex-col p-4">
+	<h3 class="text-primary-2">checkbox group</h3>
+	<form [formGroup]="form">
+		<cl-checkbox-group formControlName="categorias" [valores]="categorias">
+		</cl-checkbox-group>
+	</form>
+
+	<p>Seleccionados: {{ form.value.categorias | json }}</p>
+</section>

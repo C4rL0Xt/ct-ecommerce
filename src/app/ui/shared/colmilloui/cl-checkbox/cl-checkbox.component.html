@@ -1,0 +1,13 @@
+<div class="cl-checkbox pointer" (click)="seleccionar()">
+	<!-- Caja checkbox  -->
+	<div
+		class="cl-checkbox__box"
+		[ngClass]="{ 'cl-checkbox__box--seleccionado': estaSeleccionado() }"
+	>
+		@if(estaSeleccionado()) {
+		<span class="cl-checkbox__icon m-auto" icons nombre="check"></span>
+		}
+	</div>
+	<!-- label  -->
+	<p class="text-primary-9">{{label()}}</p>
+</div>

@@ -1,0 +1,102 @@
+@mixin color($nombre, $valor) {
+	.background-#{$nombre} {
+		background-color: $valor;
+	}
+
+	.text-#{$nombre} {
+		color: $valor;
+	}
+
+	.border-#{$nombre} {
+		border: 1px solid $valor;
+	}
+
+	.border-05-#{$nombre} {
+		border: 0.5px solid $valor;
+	}
+}
+
+@include color('inverse', var(--color-inverse));
+@include color('base', var(--color-base));
+@include color('disabled', var(--color-disabled));
+
+@include color('primary-0', var(--color-primary-0));
+@include color('primary-1', var(--color-primary-1));
+@include color('primary-2', var(--color-primary-2));
+@include color('primary-3', var(--color-primary-3));
+@include color('primary-4', var(--color-primary-4));
+@include color('primary-5', var(--color-primary-5));
+@include color('primary-6', var(--color-primary-6));
+@include color('primary-7', var(--color-primary-7));
+@include color('primary-8', var(--color-primary-8));
+@include color('primary-9', var(--color-primary-9));
+
+@include color('secondary-0', var(--color-secondary-0));
+@include color('secondary-1', var(--color-secondary-1));
+@include color('secondary-2', var(--color-secondary-2));
+@include color('secondary-3', var(--color-secondary-3));
+@include color('secondary-4', var(--color-secondary-4));
+@include color('secondary-5', var(--color-secondary-5));
+@include color('secondary-6', var(--color-secondary-6));
+@include color('secondary-7', var(--color-secondary-7));
+@include color('secondary-8', var(--color-secondary-8));
+@include color('secondary-9', var(--color-secondary-9));
+
+@include color('tertiary-0', var(--color-tertiary-0));
+@include color('tertiary-1', var(--color-tertiary-1));
+@include color('tertiary-2', var(--color-tertiary-2));
+@include color('tertiary-3', var(--color-tertiary-3));
+@include color('tertiary-4', var(--color-tertiary-4));
+@include color('tertiary-5', var(--color-tertiary-5));
+@include color('tertiary-6', var(--color-tertiary-6));
+@include color('tertiary-7', var(--color-tertiary-7));
+@include color('tertiary-8', var(--color-tertiary-8));
+@include color('tertiary-9', var(--color-tertiary-9));
+
+@include color('success-0', var(--color-success-0));
+@include color('success-1', var(--color-success-1));
+@include color('success-2', var(--color-success-2));
+@include color('success-3', var(--color-success-3));
+@include color('success-4', var(--color-success-4));
+@include color('success-5', var(--color-success-5));
+@include color('success-6', var(--color-success-6));
+@include color('success-7', var(--color-success-7));
+@include color('success-8', var(--color-success-8));
+@include color('success-9', var(--color-success-9));
+
+@include color('warning-0', var(--color-warning-0));
+@include color('warning-1', var(--color-warning-1));
+@include color('warning-2', var(--color-warning-2));
+@include color('warning-3', var(--color-warning-3));
+@include color('warning-4', var(--color-warning-4));
+@include color('warning-5', var(--color-warning-5));
+@include color('warning-6', var(--color-warning-6));
+@include color('warning-7', var(--color-warning-7));
+@include color('warning-8', var(--color-warning-8));
+@include color('warning-9', var(--color-warning-9));
+
+@include color('danger-0', var(--color-danger-0));
+@include color('danger-1', var(--color-danger-1));
+@include color('danger-2', var(--color-danger-2));
+@include color('danger-3', var(--color-danger-3));
+@include color('danger-4', var(--color-danger-4));
+@include color('danger-5', var(--color-danger-5));
+@include color('danger-6', var(--color-danger-6));
+@include color('danger-7', var(--color-danger-7));
+@include color('danger-8', var(--color-danger-8));
+@include color('danger-9', var(--color-danger-9));
+
+
+@include color('subordinary-0', var(--color-subordinary-0));
+@include color('subordinary-1', var(--color-subordinary-1));
+@include color('subordinary-2', var(--color-subordinary-2));
+@include color('subordinary-3', var(--color-subordinary-3));
+@include color('subordinary-4', var(--color-subordinary-4));
+@include color('subordinary-5', var(--color-subordinary-5));
+@include color('subordinary-6', var(--color-subordinary-6));
+@include color('subordinary-7', var(--color-subordinary-7));
+@include color('subordinary-8', var(--color-subordinary-8));
+@include color('subordinary-9', var(--color-subordinary-9));
+
+@include color('base-10', var(--color-base-10));
+

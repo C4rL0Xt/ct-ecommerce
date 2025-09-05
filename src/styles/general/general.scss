@@ -1,0 +1,49 @@
+body {
+    color: var(--color-base);
+    background-color: var(--color-inverse);
+}
+
+html, body {
+    font-family: "Poppins", sans-serif;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fade-in {
+    transition: all 0.25s ease-in;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.w100-screen {
+	width: 100dvw;
+}
+
+.h100-screen {
+	height: 100dvh;
+}
+
+.min-h100-screen {
+	min-height: 100dvh;
+	height: auto;
+}
+
+.main-container {
+    padding: 24px 40px;
+}

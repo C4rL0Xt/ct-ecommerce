@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'sass:math';
+@use 'styles/tokens/texts/tokens-texts.scss' as Texts;
+
+@forward 'styles/clases/clases-colores.scss';
+@forward 'styles/general/general.scss';
+@forward 'styles/root/root.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		font-size: #{Texts.$textH1};
+		font-weight: 600;
+		line-height: #{math.round(1.4 * Texts.$textH1)};
+	}
+	h2 {
+		font-size: #{Texts.$textH2};
+		font-weight: 500;
+		line-height: #{math.round(1.4 * Texts.$textH2)};
+	}
+	h3 {
+		font-size: #{Texts.$textH3};
+		font-weight: 500;
+		line-height: #{math.round(1.4 * Texts.$textH3)};
+	}
+	h4 {
+		font-size: #{Texts.$textH4};
+		font-weight: 500;
+		line-height: #{math.round(1.4 * Texts.$textH4)};
+	}
+	h5 {
+		font-size: #{Texts.$textH5};
+		font-weight: 500;
+		line-height: #{math.round(1.4 * Texts.$textH5)};
+	}
+	h6 {
+		font-size: #{Texts.$textH6};
+		font-weight: 400;
+		line-height: #{math.round(1.4 * Texts.$textH6)};
+	}
+	p {
+		font-size: #{Texts.$textBody};
+		font-weight: 400;
+		line-height: #{math.round(1.4 * Texts.$textBody)};
+	}
+
+	.text-description {
+		font-size: #{Texts.$textDescription};
+		font-weight: 400;
+		line-height: #{math.round(1.4 * Texts.$textDescription)};
+	}
+
+	.text-bold {
+		font-weight: 600;
+	}
+	.text-regular {
+		font-weight: 400;
+	}
+	.text-medium {
+		font-weight: 500;
+	}
+}

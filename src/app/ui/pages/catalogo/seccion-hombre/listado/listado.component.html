@@ -1,0 +1,11 @@
+<main class="main-container">
+	<p>listado para hombres works!</p>
+	<button (click)="openFiltro()">Abrir filtros</button>
+	<button [routerLink]="[Rutas.catalogo.hombre, '1']">Ir a detalle</button>
+</main>
+
+<filtros-drawer-hombres
+	[isVisible]="isDrawerFilterOpen()"
+	[handleClose]="cerrarFiltros"
+	[formulario]="fb.formulario"
+/>

@@ -1,0 +1,41 @@
+.cl-checkbox {
+	display: flex;
+	align-items: center;
+	gap: var(--spaceXxs);
+
+	input {
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.cl-checkbox:hover {
+	.cl-checkbox__box {
+		border: 2px solid var(--color-primary-6);
+	}
+}
+
+.cl-checkbox__box {
+	width: 20px;
+	height: 20px;
+	border: 2px solid var(--color-primary-5);
+	border-radius: var(--spaceXxxs);
+	display: flex;
+	transition: all 0.3s;
+}
+
+.cl-checkbox__box--seleccionado {
+	background: var(--color-primary-5);
+	border: 2px solid var(--color-primary-6);
+}
+
+.cl-checkbox__icon {
+	color: var(--color-inverse);
+}
+
+// box 20x20
+// br: 4px
+// bw : 1.5px
+// label: 14 - 16 px
+// gap : 8px

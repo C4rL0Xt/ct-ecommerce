@@ -1,0 +1,92 @@
+@use '../tokens/spaces/tokens-spaces.scss' as Spaces;
+@use '../tokens/colors/tokens-colors.scss' as Colors;
+
+:root {
+	--color-inverse: #{Colors.$color-inverse};
+	--color-base: #{Colors.$color-base};
+	--color-disabled: #{Colors.$color-disabled};
+
+	--color-primary-1: #{Colors.$color-primary-1};
+	--color-primary-2: #{Colors.$color-primary-2};
+	--color-primary-3: #{Colors.$color-primary-3};
+	--color-primary-4: #{Colors.$color-primary-4};
+	--color-primary-5: #{Colors.$color-primary-5};
+	--color-primary-6: #{Colors.$color-primary-6};
+	--color-primary-7: #{Colors.$color-primary-7};
+	--color-primary-8: #{Colors.$color-primary-8};
+	--color-primary-9: #{Colors.$color-primary-9};
+
+	--color-secondary-1: #{Colors.$color-secondary-1};
+	--color-secondary-2: #{Colors.$color-secondary-2};
+	--color-secondary-3: #{Colors.$color-secondary-3};
+	--color-secondary-4: #{Colors.$color-secondary-4};
+	--color-secondary-5: #{Colors.$color-secondary-5};
+	--color-secondary-6: #{Colors.$color-secondary-6};
+	--color-secondary-7: #{Colors.$color-secondary-7};
+	--color-secondary-8: #{Colors.$color-secondary-8};
+	--color-secondary-9: #{Colors.$color-secondary-9};
+
+	--color-tertiary-1: #{Colors.$color-tertiary-1};
+	--color-tertiary-2: #{Colors.$color-tertiary-2};
+	--color-tertiary-3: #{Colors.$color-tertiary-3};
+	--color-tertiary-4: #{Colors.$color-tertiary-4};
+	--color-tertiary-5: #{Colors.$color-tertiary-5};
+	--color-tertiary-6: #{Colors.$color-tertiary-6};
+	--color-tertiary-7: #{Colors.$color-tertiary-7};
+	--color-tertiary-8: #{Colors.$color-tertiary-8};
+	--color-tertiary-9: #{Colors.$color-tertiary-9};
+
+	--color-success-0: #{Colors.$color-success-0};
+	--color-success-1: #{Colors.$color-success-1};
+	--color-success-2: #{Colors.$color-success-2};
+	--color-success-3: #{Colors.$color-success-3};
+	--color-success-4: #{Colors.$color-success-4};
+	--color-success-5: #{Colors.$color-success-5};
+	--color-success-6: #{Colors.$color-success-6};
+	--color-success-7: #{Colors.$color-success-7};
+	--color-success-8: #{Colors.$color-success-8};
+	--color-success-9: #{Colors.$color-success-9};
+
+	--color-warning-0: #{Colors.$color-warning-0};
+	--color-warning-1: #{Colors.$color-warning-1};
+	--color-warning-2: #{Colors.$color-warning-2};
+	--color-warning-3: #{Colors.$color-warning-3};
+	--color-warning-4: #{Colors.$color-warning-4};
+	--color-warning-5: #{Colors.$color-warning-5};
+	--color-warning-6: #{Colors.$color-warning-6};
+	--color-warning-7: #{Colors.$color-warning-7};
+	--color-warning-8: #{Colors.$color-warning-8};
+	--color-warning-9: #{Colors.$color-warning-9};
+
+	--color-danger-0: #{Colors.$color-danger-0};
+	--color-danger-1: #{Colors.$color-danger-1};
+	--color-danger-2: #{Colors.$color-danger-2};
+	--color-danger-3: #{Colors.$color-danger-3};
+	--color-danger-4: #{Colors.$color-danger-4};
+	--color-danger-5: #{Colors.$color-danger-5};
+	--color-danger-6: #{Colors.$color-danger-6};
+	--color-danger-7: #{Colors.$color-danger-7};
+	--color-danger-8: #{Colors.$color-danger-8};
+	--color-danger-9: #{Colors.$color-danger-9};
+
+	--color-subordinary-0: #{Colors.$color-subordinary-0};
+	--color-subordinary-1: #{Colors.$color-subordinary-1};
+	--color-subordinary-2: #{Colors.$color-subordinary-2};
+	--color-subordinary-3: #{Colors.$color-subordinary-3};
+	--color-subordinary-4: #{Colors.$color-subordinary-4};
+	--color-subordinary-5: #{Colors.$color-subordinary-5};
+	--color-subordinary-6: #{Colors.$color-subordinary-6};
+	--color-subordinary-7: #{Colors.$color-subordinary-7};
+	--color-subordinary-8: #{Colors.$color-subordinary-8};
+	--color-subordinary-9: #{Colors.$color-subordinary-9};
+
+	--color-base-10: #{Colors.$color-base-10};
+
+	--spaceXxxs: #{Spaces.$spaceXxxs};
+	--spaceXxs: #{Spaces.$spaceXxs};
+	--spaceXs: #{Spaces.$spaceXs};
+	--spaceSm: #{Spaces.$spaceSm};
+	--spaceMd: #{Spaces.$spaceMd};
+	--spaceLg: #{Spaces.$spaceLg};
+	--spaceXl: #{Spaces.$spaceXl};
+}

@@ -1,0 +1,90 @@
+@use 'sass:color';
+
+$color-inverse: #fbfbfb;
+$color-base: #1e0d01;
+$color-disabled: #d9d9d9;
+
+$color-primary-1: #dbeef2;
+$color-primary-2: #badde7;
+$color-primary-3: #8bc5d5;
+$color-primary-4: #54a3bc;
+$color-primary-5: #3887a2;
+$color-primary-6: #326f88;
+$color-primary-7: #326f88;
+$color-primary-8: #2d4d5d;
+$color-primary-9: #294150;
+
+// SECONDARY – Beige cálido
+$color-secondary-1: #dcf0f1;
+$color-secondary-2: #bde1e4;
+$color-secondary-3: #8fccd1;
+$color-secondary-4: #59adb7;
+$color-secondary-5: #3c8d97;
+$color-secondary-6: #367884;
+$color-secondary-7: #31626d;
+$color-secondary-8: #2f525b;
+$color-secondary-9: #2b454e;
+
+// TERTIARY – Neutros gris azulados
+$color-tertiary-1: #ffe4f4;
+$color-tertiary-2: #ffc8eb;
+$color-tertiary-3: #ff9cd9;
+$color-tertiary-4: #ff5fbe;
+$color-tertiary-5: #ff30a2;
+$color-tertiary-6: #f60c7e;
+$color-tertiary-7: #d70062;
+$color-tertiary-8: #a7034c;
+$color-tertiary-9: #930846;
+
+$color-success-0: #d1faed;
+$color-success-1: #a3f5da;
+$color-success-2: #75f0c8;
+$color-success-3: #48ebb6;
+$color-success-4: #1ae6a3;
+$color-success-5: #14b983;
+$color-success-6: #119a6d;
+$color-success-7: #0d7b57;
+$color-success-8: #0a5d42;
+$color-success-9: #073e2c;
+
+$color-warning-0: #fdefd7;
+$color-warning-1: #fbdfae;
+$color-warning-2: #f9cf86;
+$color-warning-3: #f6be5e;
+$color-warning-4: #f4ae35;
+$color-warning-5: #f29e0d;
+$color-warning-6: #ca840b;
+$color-warning-7: #a16909;
+$color-warning-8: #794f07;
+$color-warning-9: #513504;
+
+$color-danger-0: #fce0e0;
+$color-danger-1: #f9c1c2;
+$color-danger-2: #f6a2a3;
+$color-danger-3: #f38384;
+$color-danger-4: #f06466;
+$color-danger-5: #ed4547;
+$color-danger-6: #e91619;
+$color-danger-7: #ba1214;
+$color-danger-8: #8c0d0f;
+$color-danger-9: #5d090a;
+
+$color-subordinary-0: #f0f0f0;
+$color-subordinary-1: #e1e1e1;
+$color-subordinary-2: #d3d3d3;
+$color-subordinary-3: #c4c4c4;
+$color-subordinary-4: #b5b5b5;
+$color-subordinary-5: #a6a6a6;
+$color-subordinary-6: #8e8e8e;
+$color-subordinary-7: #777777;
+$color-subordinary-8: #5f5f5f;
+$color-subordinary-9: #474747;
+
+// transparencias
+
+$color-base-10: rgba(
+    color.channel($color-base, 'red'),
+    color.channel($color-base, 'green'),
+    color.channel($color-base, 'blue'),
+    0.1
+);

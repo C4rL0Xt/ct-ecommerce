@@ -1,0 +1,9 @@
+<div class="cl-checkbox-group">
+  @for (opcion of valores(); track opcion.id) {
+    <cl-checkbox
+      [label]="opcion.label"
+      [ngModel]="isChecked(opcion.id)"
+      (ngModelChange)="toggle(opcion.id)">
+    </cl-checkbox>
+  }
+</div>
