@@ -1,3 +1,7 @@
-<button class="btn-talla pointer fade-in" (click)="seleccionar()">
-    {{valor().label}}
+<button
+	class="btn-talla pointer fade-in"
+	[ngClass]="{ 'btn-talla--seleccionado': estaSeleccionado }"
+	(click)="seleccionar()"
+>
+	{{ valor().label }}
 </button>

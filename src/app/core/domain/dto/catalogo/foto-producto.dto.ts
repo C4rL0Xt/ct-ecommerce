@@ -1,6 +1,6 @@
 
 
 export interface FotoProducto {
-    fotoId: number;
+    fotoId?: number;
     url: string;
 }

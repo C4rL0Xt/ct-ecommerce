@@ -1,1 +1,168 @@
-<p>detalle de ropa hombre works!</p>
+<main class="max-w-6xl mx-auto p-6 lg:p-12 text-[var(--color-base)]">
+	<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+		<!-- gallery -->
+		<div class="gallery relative">
+			<div
+				class="main-image w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-700 will-change-transform"
+			>
+				<img
+					[src]="selectedImage()"
+					alt="{{ producto?.nombre }}"
+					class="w-full h-full object-cover object-center scale-100 transition-transform duration-700 ease-out gallery-img"
+					(load)="onImageLoad()"
+					(error)="onImageError()"
+					draggable="false"
+				/>
+
+				<!-- floating buttons actions  -->
+				<div class="absolute top-4 right-4 flex flex-col gap-3">
+					<button
+						aria-label="Agregar a favoritos"
+						(click)="toggleFavorite()"
+						class="p-2 rounded-full shadow-md backdrop-blur-sm ring-1"
+						[class.favorited]="isFavorite()"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 21s-6.716-4.35-9.07-7.054C.923 11.918 3.078 6.5 7.5 6.5c2.04 0 3.5.998 4.5 2.18C12.999 7.498 14.459 6.5 16.5 6.5c4.422 0 6.577 5.418 4.57 7.446C18.716 16.65 12 21 12 21z"
+							></path>
+						</svg>
+					</button>
+					<button
+						aria-label="Compartir"
+						(click)="share()"
+						class="p-2 rounded-full shadow-md backdrop-blur-sm ring-1"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"></path>
+							<path d="M16 6l-4-4-4 4"></path>
+							<path d="M12 2v14"></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<!-- Thumbnails -->
+			<div
+				class="mt-4 grid grid-flow-col auto-cols-fr gap-3 overflow-auto hide-scrollbar"
+			>
+				<button
+					*ngFor="let f of allImages; let i = index"
+					(click)="selectImage(i)"
+					class="thumbnail rounded-lg overflow-hidden ring-1 ring-transparent focus:ring-2 focus:ring-[var(--color-primary-5)] transition-all duration-300"
+				>
+					<img
+						[src]="f.url"
+						class="w-28 h-28 object-cover"
+						alt="thumb-{{ i }}"
+						draggable="false"
+					/>
+				</button>
+			</div>
+		</div>
+		<aside class="flex flex-col gap-4">
+			<h1 class="text-2xl lg:text-3xl font-semibold">{{ producto?.nombre }}</h1>
+			<p class="text-sm text-[var(--color-subordinary-7)]">
+				{{ producto?.descripcion }}
+			</p>
+
+			<div class="flex items-center gap-4 mt-3">
+				<div class="price text-2xl font-bold">
+					S/ {{ producto?.precio | number: '1.2-2' }}
+				</div>
+				<div
+					class="badge px-3 py-1 rounded-full text-sm text-[var(--color-base)] bg-[var(--color-primary-1)] ring-1"
+				>
+					Envio 24-48h
+				</div>
+			</div>
+			<section class="mt-4 flex flex-col gap-4">
+				<div>
+					<div class="label text-xs mb-2 text-[var(--color-subordinary-7)]">
+						Color
+					</div>
+					<div class="flex items-center gap-3">
+						<button
+							*ngFor="let c of producto?.colores; trackBy: trackByColor"
+							(click)="selectColor(c.colorId)"
+							[attr.aria-pressed]="selectedColorId() === c.colorId"
+							class="w-10 h-10 rounded-full ring-1 ring-transparent focus:ring-2 focus:ring-[var(--color-primary-5)] transition-transform transform hover:scale-110"
+							[style.background]="c.codigoHex"
+						>
+							<span class="sr-only">{{ c.nombreColor }}</span>
+						</button>
+					</div>
+				</div>
+
+				<div>
+					<div class="label text-xs mb-2 text-[var(--color-subordinary-7)]">
+						Talla
+					</div>
+					<div class="flex flex-wrap gap-2">
+						<button
+							*ngFor="let t of tallasDisponibles(); trackBy: trackByTalla"
+							(click)="selectTalla(t.tallaId)"
+							[disabled]="t.stock === 0"
+							class="px-3 py-2 rounded-md text-sm ring-1 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+							[class.selected]="selectedTallaId() === t.tallaId"
+						>
+							{{ t.nombre }}
+						</button>
+					</div>
+				</div>
+
+				<div class="flex items-center gap-4">
+					<div class="flex items-center border rounded-md overflow-hidden">
+						<button (click)="decrement()" class="px-3 py-2">-</button>
+						<div class="px-4 py-2">{{ cantidad() }}</div>
+						<button (click)="increment()" class="px-3 py-2">+</button>
+					</div>
+
+					<button
+						(click)="addToCart()"
+						class="ml-auto px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition-transform transform hover:-translate-y-1"
+						[class.disabled]="!canAddToCart()"
+						[disabled]="!canAddToCart()"
+						style="background: var(--color-primary-5)"
+					>
+						Añadir al carrito
+					</button>
+				</div>
+			</section>
+
+			<!-- detalles  -->
+			<details class="mt-4 p-4 rounded-lg ring-1" open>
+				<summary class="font-medium cursor-pointer">Detalles</summary>
+				<ul class="mt-3 text-sm">
+					<li>
+						<strong>Material:</strong>
+						{{ producto?.detalles!.material }}
+					</li>
+					<li>
+						<strong>Longitud:</strong>
+						{{ producto?.detalles!.longitudPrenda }}
+					</li>
+					<li>
+						<strong>Ajuste:</strong>
+						{{ producto?.detalles!.ajuste }}
+					</li>
+					<li>
+						<strong>Origen:</strong>
+						{{ producto?.detalles!.origenFabricacion }}
+					</li>
+				</ul>
+			</details>
+            <div class="mt-3 text-xs text-[var(--color-subordinary-7)]">En caso de dudas usa el chat o revisa la guía de tallas.</div>
+		</aside>
+	</section>
+</main>

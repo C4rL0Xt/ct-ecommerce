@@ -20,6 +20,10 @@ export abstract class FormBase<
 	protected abstract inicializarFormulario(): void;
 	protected desahabilitarCampos?(): void;
 
+	public getFormulario(): FormGroup<IForm> {
+		return this.formulario;
+	}
+
 	public markAllAsTouched() {
 		this.formulario.markAllAsTouched();
 	}

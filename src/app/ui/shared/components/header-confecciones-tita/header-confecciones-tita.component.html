@@ -12,7 +12,9 @@
 		<!-- Menú de navegación -->
 		<nav class="hidden md:flex gap-6 text-gray-700 font-medium relative">
 			<button
-				[routerLink]="Rutas.catalogo.hombre"
+				(click)="seleccionarCategoria(generoEnum.Hombre)"
+				[routerLink]="Rutas.catalogo.base"
+				[queryParams]="{genero: generoEnum.Hombre}"
 				routerLinkActive="active"
 				class="relative pb-1 hover:text-blue-600 transition-colors duration-300"
 			>
@@ -23,7 +25,9 @@
 			</button>
 
 			<button
-				[routerLink]="Rutas.catalogo.mujer"
+				(click)="seleccionarCategoria(generoEnum.Mujer)"
+				[routerLink]="Rutas.catalogo.base"
+				[queryParams]="{genero: generoEnum.Mujer}"
 				routerLinkActive="active"
 				class="relative pb-1 hover:text-blue-600 transition-colors duration-300"
 			>
@@ -34,7 +38,9 @@
 			</button>
 
 			<button
-				[routerLink]="Rutas.catalogo.ninos"
+				(click)="seleccionarCategoria(generoEnum.Ninos)"
+				[routerLink]="Rutas.catalogo.base"
+				[queryParams]="{genero: generoEnum.Ninos}"
 				routerLinkActive="active"
 				class="relative pb-1 hover:text-blue-600 transition-colors duration-300"
 			>

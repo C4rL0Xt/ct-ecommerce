@@ -14,7 +14,7 @@ import { firstValueFrom } from 'rxjs';
 @Directive({
 	selector: '[icons]',
 })
-export class IconsDirective implements OnInit {
+export class ClIconsDirective implements OnInit {
 	private _nombre!: Icons;
 
 	@Input()

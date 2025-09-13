@@ -1,11 +1,11 @@
 import { Component, computed, forwardRef, input, signal } from '@angular/core';
-import { IconsDirective } from '../../directives/icons.directive';
+import { ClIconsDirective } from '../../directives/icons.directive';
 import { NgClass } from '@angular/common';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
 	selector: 'cl-checkbox',
-	imports: [IconsDirective, NgClass],
+	imports: [ClIconsDirective, NgClass],
 	templateUrl: './cl-checkbox.component.html',
 	styleUrl: './cl-checkbox.component.scss',
 	providers: [

@@ -9,4 +9,6 @@ export interface Producto {
     categoriaId: number;
     subcategoriaId: number;
     foto: FotoProducto;
+    precio: number;
+    moneda: string;
 }

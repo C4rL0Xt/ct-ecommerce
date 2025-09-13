@@ -1,0 +1,10 @@
+<div class="container-categorias">
+	@for (categoria of categoriasFiltradas; track $index) {
+		<boton-categoria
+			[categoriaId]="categoria.categoriaId"
+			[categoria]="categoria"
+			[controlCategoria]="formulario()!.controls.categoriaId"
+			[routeKeyParam]="'categoria'"
+		/>
+	}
+</div>

@@ -1,0 +1,10 @@
+<div class="grid grid-cols-5 gap-2">
+	@for (talla of tallas(); track $index) {
+		<boton-talla
+			[tallaId]="talla.id"
+			[valor]="talla"
+			(valorSeleccionado)="guardarTallas($event)"
+            [tallasSeleccionadas]="tallasSeleccionadas"
+		/>
+	}
+</div>

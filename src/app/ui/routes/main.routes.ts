@@ -12,7 +12,7 @@ export const MAIN_ROUTES: Routes = [
 					import('../pages/home/home.component').then((r) => r.HomeComponent),
 			},
 			{
-				path: 'hombre',
+				path: 'catalogo',
 				loadChildren: () =>
 					import('./seccion-hombre.routes').then(
 						(r) => r.SECCION_HOMBRE_ROUTES,
@@ -21,12 +21,16 @@ export const MAIN_ROUTES: Routes = [
 			{
 				path: 'mujer',
 				loadChildren: () =>
-					import('./seccion-mujer.routes').then((r) => r.SECCION_MUJER_ROUTES),
+					import('./seccion-hombre.routes').then(
+						(r) => r.SECCION_HOMBRE_ROUTES,
+					),
 			},
 			{
 				path: 'ninos',
 				loadChildren: () =>
-					import('./seccion-ninos.routes').then((r) => r.SECCION_NINOS_ROUTES),
+					import('./seccion-hombre.routes').then(
+						(r) => r.SECCION_HOMBRE_ROUTES,
+					),
 			},
 		],
 	},

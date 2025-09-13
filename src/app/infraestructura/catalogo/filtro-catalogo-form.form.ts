@@ -9,6 +9,8 @@ export class FiltroCatalogoForm extends FormBase<
 > {
 	protected override inicializarFormulario(): void {
 		this.formulario = new FormGroup<IFiltroProductoForm>({
+			generoId: new FormControl<number | null | undefined>(undefined),
+			categoriaId: new FormControl<number | null | undefined>(0),
 			categorias: new FormControl<number[] | null | undefined>(undefined),
 			precio: new FormControl<number[] | null | undefined>([0, 100]),
 			tallas: new FormControl<number[] | null | undefined>(undefined),

@@ -1,11 +1,37 @@
-<main class="main-container">
-	<p>listado para hombres works!</p>
-	<button (click)="openFiltro()">Abrir filtros</button>
-	<button [routerLink]="[Rutas.catalogo.hombre, '1']">Ir a detalle</button>
+<main class="main-container flex flex-col">
+	<section class="flex flex-col gap-6">
+		<categorias [formulario]="formulario!" />
+		<div class="flex justify-between">
+			<nz-select nzPlaceHolder="Ordenar por">
+				<nz-option nzLabel="Mayor precio" nzValue="Mayor precio" />
+				<nz-option nzLabel="Menor precio" nzValue="Menor precio" />
+			</nz-select>
+			<button
+				#btnFiltros
+				class="self-end flex items-center gap-4"
+				nz-button
+				nzType="text"
+				(click)="openFiltro()"
+			>
+				<span icons nombre="filter"></span>
+				Abrir filtros
+			</button>
+		</div>
+		<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+			@for(producto of productos; track $index) {
+				<product-card [producto]="producto" [routerLink]="[Rutas.catalogo.base, producto.productoId]" />
+			}
+		</section>
+	</section>
+	<!-- <button [routerLink]="[Rutas.catalogo.hombre, '1']">Ir a detalle</button> -->
 </main>
 
-<filtros-drawer-hombres
-	[isVisible]="isDrawerFilterOpen()"
-	[handleClose]="cerrarFiltros"
-	[formulario]="fb.formulario"
-/>
+@defer (on interaction(btnFiltros)) {
+	@if (isDrawerFilterOpen()) {
+		<filtros-drawer-hombres
+			[(isVisible)]="isDrawerFilterOpen"
+			[handleClose]="cerrarFiltros"
+			[formulario]="formulario!"
+		/>
+	}
+}

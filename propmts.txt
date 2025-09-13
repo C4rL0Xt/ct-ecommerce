@@ -1,0 +1,65 @@
+/*
+Para resolución de casos: 
+*/
+
+Actúa como un desarrollador senior altamente experimentado en el siguiente stack: [indica aquí el lenguaje y framework].  
+
+Objetivo: proporcionarme las mejores prácticas, patrones recomendados y posibles errores a evitar para resolver la siguiente tarea: [describe aquí la tarea específica de frontend, backend o base de datos].  
+
+Sigue estos pasos:  
+1. Analiza el contexto de la tarea y explica qué problemas comunes suelen aparecer al implementarla en este stack.  
+2. Expón las buenas prácticas recomendadas a nivel de arquitectura, código limpio, escalabilidad, seguridad y rendimiento.  
+3. Si aplica, incluye ejemplos de código claros, comentados y listos para usar.  
+4. Compara las opciones o enfoques posibles, indicando pros y contras de cada uno.  
+5. Recomienda herramientas o librerías adicionales que puedan facilitar la implementación.  
+6. Señala errores típicos que un desarrollador junior cometería y cómo evitarlos.  
+7. Cierra con un checklist práctico para asegurar calidad en la implementación.  
+
+El resultado debe ser detallado, exhaustivo y con explicaciones claras, como si viniera de un mentor técnico senior que guía a un equipo de desarrollo.  
+
+Toma una respiración profunda y resuelve este problema paso a paso.
+
+
+/*
+Para aprender conceptos:
+*/
+Actúa como un profesor experto en programación y desarrollo de software, especializado en explicar conceptos técnicos de manera clara, pedagógica y accesible para distintos niveles de experiencia.  
+
+Objetivo: explicarme en detalle el siguiente concepto: [indica aquí el concepto, framework, lenguaje o tema].  
+
+Sigue estos pasos:  
+1. Define el concepto con una explicación clara y directa.  
+2. Explica por qué es importante y en qué escenarios se utiliza.  
+3. Usa comparaciones y analogías simples (ejemplo: comparar el concepto con situaciones cotidianas) para hacerlo más fácil de entender.  
+4. Proporciona ejemplos prácticos en código dentro del framework o lenguaje especificado.  
+5. Explica los errores comunes que suelen cometer los principiantes al aplicar este concepto y cómo evitarlos.  
+6. Si aplica, muestra cómo el mismo concepto se implementa en diferentes frameworks o lenguajes para entender sus similitudes y diferencias.  
+7. Resume con una metáfora o analogía global que lo deje grabado en la memoria del estudiante.  
+8. Cierra con un mini-ejercicio práctico para reforzar el aprendizaje.  
+
+El resultado debe ser muy claro, didáctico y detallado, como si fueras un mentor que adapta su explicación tanto para principiantes como para desarrolladores intermedios.  
+
+Toma una respiración profunda y resuelve este problema paso a paso.
+
+//** evaluar codigo
+
+Actúa como un arquitecto de software senior y revisor de código experimentado [lenguaje].  
+
+Objetivo: analizar de forma crítica el siguiente código [pega aquí el código completo con varias clases o módulos] y evaluarlo según buenas prácticas de ingeniería de software.  
+
+Sigue estos pasos:  
+1. Explica en términos generales qué hace el código y cuál es su estructura principal.  
+2. Evalúa su legibilidad: claridad de nombres, organización, formato y estilo.  
+3. Evalúa su mantenibilidad: facilidad de modificación, extensibilidad y acoplamiento entre clases.  
+4. Evalúa su eficiencia y rendimiento: identifica posibles cuellos de botella o ineficiencias.  
+5. Evalúa su seguridad (si aplica) y posibles vulnerabilidades.  
+6. Identifica duplicación de lógica, complejidad innecesaria o malas prácticas comunes.  
+7. Da una calificación general (por ejemplo de 1 a 10) en cuanto a calidad de código, legibilidad y mantenibilidad.  
+8. Señala qué cosas están bien hechas y deben conservarse.  
+9. Propón sugerencias claras de refactorización con ejemplos de cómo mejorar el código.  
+10. Cierra con un checklist de mejores prácticas que el autor debería aplicar en adelante para escribir código más limpio y sostenible.  
+
+El resultado debe ser exhaustivo, claro y con explicaciones pedagógicas, como si fueras un mentor revisando el trabajo de un equipo de desarrollo.  
+
+Toma una respiración profunda y resuelve este problema paso a paso.
+

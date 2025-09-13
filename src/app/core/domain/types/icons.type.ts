@@ -3,4 +3,5 @@ export type Icons =
     | 'search' 
     | 'user' 
     | 'carrito'
-    | 'check';
+    | 'check'
+    | 'filter';

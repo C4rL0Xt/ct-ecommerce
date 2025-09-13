@@ -1,0 +1,20 @@
+@if (!routeKeyParam()) {
+	<button
+		[ngClass]="{ 'button-active': estaSeleccionado() }"
+		(click)="seleccionarCategoria(categoriaId())"
+        class="button"
+	>
+		{{ categoria().nombre }}
+	</button>
+} @else {
+	<a
+		[routerLink]="[]"
+        [queryParams]="queryParam(categoriaId())"
+        queryParamsHandling="merge"
+		[ngClass]="{ 'button-active': estaSeleccionado() }"
+        class="button text-medium"
+		(click)="seleccionarCategoria(categoriaId())"
+	>
+		{{ categoria().nombre }}
+	</a>
+}

@@ -4,6 +4,7 @@
 	[nzPlacement]="placement"
 	nzTitle="Filtros"
 	(nzOnClose)="handleClose()!()"
+	[nzCloseOnNavigation]=""
 >
 	<ng-container *nzDrawerContent>
 		<section class="flex flex-col h-full">
@@ -15,34 +16,36 @@
 				<div class="flex flex-col gap-4">
 					<h6 class="text-primary-6 text-medium">Categoría</h6>
 					<div class="flex flex-col gap-4 h-full">
-						<cl-checkbox-group [valores]="subcategorias" />
+						<cl-checkbox-group [valores]="subcategorias!" [formControl]="formulario.controls.categorias" />
 					</div>
 				</div>
 
 				<!-- precio -->
 				<div class="flex flex-col gap-4">
 					<h6 class="text-primary-6 text-medium">Precio</h6>
-					<nz-slider nzRange nzMax="300" [formControl]="formulario.controls.precio" />
+					<nz-slider
+						nzRange
+						nzMax="300"
+						[formControl]="formulario.controls.precio"
+					/>
 				</div>
 
 				<!-- talla -->
 				<div class="flex flex-col gap-4">
 					<h6 class="text-primary-6 text-medium">Tallas</h6>
-					<div class="grid grid-cols-5 gap-2">
-						@for (talla of tallas; track $index) {
-						<boton-talla [valor]="talla" (valorSeleccionado)="guardarTallas($event)" />
-						}
-					</div>
+					<filtro-group-tallas
+						[tallas]="tallas"
+						[controlTalla]="formulario.controls.tallas"
+					/>
 				</div>
 
 				<!-- colores -->
 				<div class="flex flex-col gap-4">
 					<h6 class="text-primary-6 text-medium">Colores</h6>
-					<div class="grid grid-cols-8 gap-2">
-						@for (color of colores; track $index) {
-						<boton-color [color]="color" (colorSeleccionado)="guardarColores($event)" />
-						}
-					</div>
+					<filtro-group-colores
+						[colores]="colores"
+						[controlColores]="formulario.controls.colores"
+					/>
 				</div>
 			</div>
 
@@ -51,7 +54,9 @@
 				<button nz-button nzType="default" (click)="handleClose()!()">
 					Cancelar
 				</button>
-				<button nz-button nzType="primary" (click)="mostrarFormulario()">Aplicar filtros</button>
+				<button nz-button nzType="primary" (click)="mostrarFormulario()">
+					Aplicar filtros
+				</button>
 			</div>
 		</section>
 	</ng-container>

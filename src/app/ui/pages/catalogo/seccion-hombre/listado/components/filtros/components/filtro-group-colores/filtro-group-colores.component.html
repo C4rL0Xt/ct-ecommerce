@@ -1,0 +1,10 @@
+<div class="grid grid-cols-8 gap-2">
+	@for (color of colores(); track $index) {
+		<boton-color
+			[colorId]="color.id"
+			[color]="color"
+			(colorSeleccionado)="guardarColores($event)"
+			[coloresSeleccionados]="coloresSeleccionados"
+		/>
+	}
+</div>

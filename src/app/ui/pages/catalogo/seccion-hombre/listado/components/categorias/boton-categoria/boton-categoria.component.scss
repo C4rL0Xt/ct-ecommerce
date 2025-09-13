@@ -1,0 +1,18 @@
+.button {
+    background-color: var(--color-inverse);
+    border: 1px var(--color-primary-5) solid;
+    // min-width: 150px;
+    padding: var(--spaceXxs) var(--spaceSm);
+    color: var(--color-primary-9);
+    border-radius: var(--spaceXs);
+    transition: all 0.3s;
+}
+
+.button:hover {
+    border: 1px var(--color-primary-7) solid;
+    background-color: var(--color-primary-4);
+}
+.button-active {
+    background-color: var(--color-primary-5);
+    color: var(--color-inverse);
+}
